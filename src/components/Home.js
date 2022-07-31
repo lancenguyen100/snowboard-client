@@ -4,10 +4,12 @@ const Home = (props) => {
 	// const { msgAlert, user } = props
 	console.log('props in home', props)
 
+	const { msgAlert } = props
+
 	return (
 		<>
 			<h2>View Snowboards!</h2>
-			<SnowboardsIndex />
+			<SnowboardsIndex  msgAlert={ msgAlert }/>
 		</>
 	)
 }
