@@ -72,7 +72,7 @@ const App = () => {
           />
 		  <Route 
 		  	path="/snowboards/:id"
-			element={ <ShowSnowboard />}
+			element={ <ShowSnowboard msgAlert={ msgAlert } />}
 		  />
 
 				</Routes>
