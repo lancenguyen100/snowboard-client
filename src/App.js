@@ -13,7 +13,7 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import ShowSnowboard from './components/snowboards/ShowSnowboard'
-
+import CreateSnowboard from './components/snowboards/CreateSnowboard'
 
 const App = () => {
 
@@ -74,8 +74,15 @@ const App = () => {
 		  	path="/snowboards/:id"
 			element={ <ShowSnowboard msgAlert={ msgAlert } />}
 		  />
+		  <Route 
+		  	path="/addSnowboard"
+			element={ 
+				<RequireAuth user={ user }>
+					<CreateSnowboard /> 
+				</RequireAuth> }
+		  />
 
-				</Routes>
+		  </Routes>
 				{msgAlerts.map((msgAlert) => (
 					<AutoDismissAlert
 						key={msgAlert.id}
