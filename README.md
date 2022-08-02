@@ -29,24 +29,32 @@ This is a client for our snowboard app. It will allow users to see and create ne
 | /sign-out | allows users to sign out of their account |
 | /chang-password | allows users to change their password |
 
-### Snowboard Views
+## Snowboard Routes
 
-| Route | Description | 
-| ----- | ------------|
-| /     | snowboards index  |
-| /snowboards/:id | snowboard show page |
-| /addSnowboard | new snowboard page |
+### Snowboard route table
+
+| Verb | URI Pattern | Controller#Action | 
+| ----- | ------------| -----------------|
+| GET   | /snowboards | snowboards#index |
+| GET   | /snowboards/:id | snowboards#show |
+| POST  | /snowboards | snowboards#create |
+| PATCH | /snowboards/:id | snowboards#update |
+| DELETE | /snowboards/:id | snowboards#delete
 
 Snowboard show page will have a modal for updating.
 Users will be able to delete via the show page.
 Snowboard show page will also allow updating and deleting boots.
 
 
-### Boots Views
+## Boots Routes
 
-| Route | Description | 
-| ----- | ------------|
-| /addBoot | new boot page |
+### Boots route table
+
+| Verb | URI Pattern | Controller#Action |
+| ----- | ------------| ----------------- |
+| POST | /boots/:snowboardId | boots#create |
+| PATCH | /boots/snowboardId/:bootId | boots#update |
+| DELETE | /boots/:snowboardId/:bootId | boots#delete |
 
 
 ### WireFrames

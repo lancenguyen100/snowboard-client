@@ -67,7 +67,7 @@ const App = () => {
             path='/change-password'
             element={
               <RequireAuth user={user}>
-                <ChangePassword msgAlert={msgAlert} user={user} />
+                <ChangePassword msgAlert={msgAlert}  />
               </RequireAuth>}
           />
 		  <Route 
@@ -78,7 +78,7 @@ const App = () => {
 		  	path="/addSnowboard"
 			element={ 
 				<RequireAuth user={ user }>
-					<CreateSnowboard /> 
+					<CreateSnowboard msgAlert={ msgAlert } user={user} /> 
 				</RequireAuth> }
 		  />
 

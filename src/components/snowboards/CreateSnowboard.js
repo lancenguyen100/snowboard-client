@@ -3,6 +3,7 @@ import { useState } from "react"
 import SnowboardForm from "../shared/SnowboardForm"
 
 const CreateSnowboard = (props) => {
+    console.log ("these are the props in CS\n", props)
     const [snowboard, setSnowboard] = useState({
         brand: "",
         type: "",
@@ -18,11 +19,14 @@ const CreateSnowboard = (props) => {
                 [updatedName]: updatedValue
             }
             return {
-                ...prevSnowboard, 
+                ...prevSnowboard,
                 ...updatedSnowboard
             }
         })
     }
+
+    // add a handleSubmit function here that makes an api request, and handles the response
+    
 
     return <SnowboardForm snowboard={ snowboard } handleChange={ handleChange }/>
 }
