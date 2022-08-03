@@ -16,12 +16,12 @@ export const createSnowboard = (user, newSnowboard) => {
     // we are going to refer to this a newSnowboard
     console.log("this is user", user)
     console.log("this is newSnowboard", newSnowboard)
-	return axios({
-		url: apiUrl + "/snowboards",
-		method: 'POST',
-		headers: {
-			Authorization: `Token token=${user.token}`,
-		},
-		data: { snowboard: newSnowboard },
-	})
+	// return axios({
+	// 	url: apiUrl + "/snowboards",
+	// 	method: 'POST',
+	// 	headers: {
+	// 		Authorization: `Token token=${user.token}`,
+	// 	},
+	// 	data: { snowboard: newSnowboard },
+	// })
 }

@@ -2,10 +2,11 @@ import { Form, Button, Container } from "react-bootstrap"
 
 
 const SnowboardForm = (props) => {
-    const { snowboard, handleChange } = props
+    const { snowboard, handleChange, heading } = props
 
  return (
      <Container className="justify-content-center">
+        <h3>{heading}</h3>
         <Form>
             <Form.Label htmlFor="brand">Brand</Form.Label>
             <Form.Control
